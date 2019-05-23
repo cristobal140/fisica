@@ -57,7 +57,7 @@ def helice_conica():
         Integrantes:
         - Mario Labbé (@LsMario1998)
         - Mario González (@tatameister)
-        - Cristóbal Cortés (@Cristobal140)
+        - Cristóbal Cortés (@cristobal140)
         - Thadly Guerra (@Thadly64)
         - Luis Inostroza (@luisinostrozaf)
         :return: Curva Helice Cónica
