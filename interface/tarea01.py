@@ -53,7 +53,7 @@ def helice_conica():
     # añadir sus códigos aca
     '''
     Integrantes:
-    Cristobal Cortes
+    Cristobal Cortes (@cristobal140)
     Thadly Guerra
     Mario Labbe
     Mario Gonzales
