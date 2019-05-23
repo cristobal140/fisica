@@ -51,6 +51,43 @@ def curva_de_ejemplo():
 
 def helice_conica():
     # añadir sus códigos aca
+    '''
+    Integrantes:
+    Cristobal Cortes
+    Thadly Guerra
+    Mario Labbe
+    Mario Gonzales
+    Luis Inostroza
+
+    :return:
+    '''
+    from mpl_toolkits.mplot3d import Axes3D  # noga: F401 unused import
+    import numpy as np
+    import sys
+    import matplotlib.pyplot as plt
+
+    plt.rcParams['legend.fontsize'] = 10
+
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+
+    # Prepare arrays x, y, z
+    theta = np.linspace(-4 * np.pi, 4 * np.pi, 100)
+
+    e = sys.float_info.epsilon
+    a = 4
+    an1 = 60
+    an2 = 30
+    k = np.sin(an1)(np.cos(an2) / np.sin(an2))
+
+    x = a * (e ** (k * theta)) * np.cos(theta)
+    y = a * (e ** (k * theta)) * np.sin(theta)
+    z = a * (e ** (k * theta)) * (np.cos(theta) / np.sin(theta))
+
+    ax.plot(x, y, z, label='parametric curve')
+    ax.legend()
+
+    plt.show()
 
     pass
 def helice_circular_1():
