@@ -6,6 +6,10 @@ from matplotlib.backend_bases import key_press_handler
 from matplotlib.figure import Figure
 import numpy as np
 import matplotlib.pyplot as plt
+import mpl_toolkits.mplot3d.axes3d as p3
+from mpl_toolkits.mplot3d import axes3d
+import time
+import matplotlib.animation as animation
 from mpl_toolkits.mplot3d import Axes3D
 
 def curva_de_ejemplo():
@@ -62,14 +66,13 @@ def helice_conica():
         - Luis Inostroza (@luisinostrozaf)
         :return: Curva Helice Cónica
         """
-
     plt.rcParams['legend.fontsize'] = 10
 
     fig = plt.figure()
     ax = fig.gca(projection='3d')
 
     # Prepare arrays x, y, z
-    theta = np.linspace(-6 * np.pi, 6 * np.pi, 1000)
+    theta = np.linspace(-6 * np.pi, 6 * np.pi, 50)
     print (np.cos((np.pi*30)/180))
 
     e = 2.718281
@@ -80,7 +83,6 @@ def helice_conica():
 
     ax.plot(x, y, z, label='helice cónica')
     ax.legend()
-
     plt.show()
     pass
 def helice_circular_1():
@@ -199,6 +201,28 @@ def Curva_de_Arquitas():
     pass
 def horoptera():
     # añadir sus códigos aca
+    '''
+        Funcion que entrega una Horptera
+        Integrantes:
+        Dennys Moraga
+        Isai Morales
+        Cristopher Moreno
+        Jose Martinez (@JoseIMG)
+    :return Curva Horoptera:
+    '''
+    plt.rcParams['legend.fontsize'] = 10
+    fig = plt.figure()
+    ax = fig.gca(projection='3d')
+    # Prepare arrays x, y, z
+    r = 6  # corresponde al radio
+    c = 1  # es una constante
+    t = np.linspace(-5 * np.pi, 5 * np.pi, 1000)
+    x = 2 * r / (1 + ((c ** 2) * (t ** 2)))
+    y = 2 * r * c * t / (1 + ((c ** 2) * (t ** 2)))
+    z = t
+    ax.plot(x, y, z, label=('Horoptera'))
+    ax.legend()
+    plt.show()
     pass
 def Curva_Bicilindrica():
     # añadir sus códigos aca
